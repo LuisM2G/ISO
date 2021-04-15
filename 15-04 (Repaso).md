@@ -5,15 +5,15 @@ Get-Psprovider   #declarantes
 --
 Get-Psdrive      #mapea
 --
-Get-WmiObject -class win32_process  #llamada wmi
+Get-WmiObject -class Win32_process  #llamada wmi
 --
-Get-process | Get-member  #variantes
+Get-Process | Get-Member  #variantes
 --
 $error[0]
 --
-start-job -scriptblock {ps}   #tarea 
-get-job -id 1
-receive-job -id 1
+Start-Job -Scriptblock {ps}   #tarea 
+Get-Job -id 1
+Receive-Job -id 1
 --
 
 ```
