@@ -13,7 +13,7 @@
 ## Cmdlefts
 ### Encontrar cmdlefts
 ```Powershell
-    Get-command -noun process
+Get-command -noun process
 ```
 ## HTML
 ```html
@@ -26,7 +26,12 @@
 
 # Cmdlefts para la administracion
 - Directorio Activo
-- Red
+- Red (ejercicio de cliente-servidor)
 - Otros cmdlefts
 
---------------
+--------------------
+
+## Todos los cmdlefts
+```Powershell
+Get-command *
+```
