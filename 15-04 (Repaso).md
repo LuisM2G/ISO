@@ -1,15 +1,9 @@
-# Repaso
-### Encontrar cmdlets
+# Jueves
+### REPASO
 ```Powershell
-Get-command -noun process
+Get-Psprovider
+Get-Psdrive
+Get-WmiObject -class win32_process
 ```
-## Todos los cmdlets
-```Powershell
-Get-command *
-```
-## Pipe line
-  - une cmdlets, y sirve para conjugar " | "
-```powershell
-get-process | select name,cpu
-```
-##
+  - declara los proveedores
+
