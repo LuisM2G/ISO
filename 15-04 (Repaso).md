@@ -8,7 +8,7 @@ Get-command -noun process
 Get-command *
 ```
 ## Pipe line
-  - une procesos, y sirve para conjugar " | "
+  - une cmdlets, y sirve para conjugar " | "
 ```powershell
 get-process | select name,cpu
 ```
