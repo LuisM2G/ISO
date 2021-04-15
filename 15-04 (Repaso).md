@@ -1,8 +1,10 @@
 # Jueves
 ### REPASO
 ```Powershell
-Get-Psprovider
-Get-Psdrive
-Get-WmiObject -class win32_process
+Get-Psprovider                     #declarantes
+Get-Psdrive                        #mapea
+Get-WmiObject -class win32_process #llamada wmi
+Get-process | Get-member
+
 ```
 
