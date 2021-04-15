@@ -3,7 +3,7 @@
 ## Inicio en Github
 - Vision general
 - Cmdlefts
-  - Encontrar cmdlefts
+  - Encontrar cmdlets
 
 ------------------------------------------
 
@@ -11,7 +11,7 @@
 ### Caracteristicas
 
 ## Cmdlefts
-### Encontrar cmdlefts
+### Encontrar cmdlets
 ```Powershell
 Get-command -noun process
 ```
@@ -24,14 +24,14 @@ Get-command -noun process
 -------------------------------
 -------------------------------
 
-# Cmdlefts para la administracion
+# Cmdlets para la administracion
 - Directorio Activo
 - Red (ejercicio de cliente-servidor)
-- Otros cmdlefts
+- Otros cmdlets
 
 --------------------
 
-## Todos los cmdlefts
+## Todos los cmdlets
 ```Powershell
 Get-command *
 ```
