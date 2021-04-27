@@ -20,3 +20,5 @@
 ### AUDITORIAS
 - EN VISOR DE EVENTOS, EN SEGURIDAD SE VEN ACCESOS.
 - PARA ACTIVAR EVENTOS EN UNA CARPETA, DERECHO > PROPIEDADES > SEGURIDAD > OP AVANZADAS > AUDITORIA > AGREGAGAR > ENTIDAD
+-------------------------------------------------------
+https://github.com/jesusninoc/ClasesISO/blob/master/2021-05-09.md
