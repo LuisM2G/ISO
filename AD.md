@@ -18,3 +18,5 @@
 - Se haran con el nombre del servidor y no con la ip de este, se puede mapear desde los ajustes de un usuario como en configuracion de usuarios y preferencias, confg.
 -------------------------------------------------------
 ###
+AUDITORIAS, EN VISOR DE EVENTOS, EN SEGURIDAD SE VEN ACCESOS.
+PARA ACTIVAR EVENTOS EN UNA CARPETA, DERECHO > PROPIEDADES > SEGURIDAD > OP AVANZADAS > AUDITORIA > AGREGAGAR > ENTIDAD
