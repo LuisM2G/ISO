@@ -1,3 +1,4 @@
+```Powershell
 $agrupar = foreach($conexion in Get-NetTCPConnection)
 {
     #"-----------------------------"
