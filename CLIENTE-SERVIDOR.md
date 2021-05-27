@@ -16,3 +16,6 @@
 - Permisos de red. Permisos locales.
 - Registros de sucesos.
 - Monitorización de sucesos.
+
+
+https://www.jesusninoc.com/01/27/ejecutar-un-cmdlet-remotamente-en-un-equipo-utilizando-sockets-udp/
