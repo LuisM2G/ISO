@@ -7,7 +7,7 @@ Start-Process -FilePath "D:\xampp\htdocs\uploads\$archivos" -Verb Print | Out-Pr
 start-sleep -Milliseconds 2000
 [System.Windows.Forms.SendKeys]::SendWait("{ENTER}")
 start-sleep -Milliseconds 2000
-[System.Windows.Forms.SendKeys]::SendWait($archivo)
+[System.Windows.Forms.SendKeys]::SendWait("C:\Users\PHINX\Desktop\$archivo")
 start-sleep -Milliseconds 2000
 [System.Windows.Forms.SendKeys]::SendWait("{ENTER}")
 start-sleep -Milliseconds 2000
