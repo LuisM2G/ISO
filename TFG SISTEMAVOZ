@@ -1,0 +1,35 @@
+#Cargar los espacios de nombres System.Speech que contienen los tipos que admiten el reconocimiento de voz
+[void][System.Reflection.Assembly]::LoadWithPartialName("System.Speech")
+ 
+#Crear un objeto de tipo motor de síntesis de voz que permite a PowerShell escuchar voz para una gramática con restricciones
+$speechRecogEngRestr = [System.Speech.Recognition.SpeechRecognitionEngine]::new()
+ 
+#Crear las restricciones para una gramática de reconocimiento de voz
+#Añadir palabras de un diccionario
+$speechRecogEngRestr.LoadGrammar([System.Speech.Recognition.GrammarBuilder]::new("abre champ"))
+$speechRecogEngRestr.LoadGrammar([System.Speech.Recognition.GrammarBuilder]::new("abrir"))
+$speechRecogEngRestr.LoadGrammar([System.Speech.Recognition.GrammarBuilder]::new("abre notepad"))
+$speechRecogEngRestr.LoadGrammar([System.Speech.Recognition.GrammarBuilder]::new("abre crome"))
+
+ 
+$speechRecogEngRestr.SetInputToDefaultAudioDevice()
+
+ ##-----------------------
+ do
+{
+    if($speechRecogEngRestr.Recognize().Text -eq "abre notepad"){Start-Process $speechRecogEngRestr.Recognize().Text}
+    if($speechRecogEngRestr.Recognize().Text -eq "abre crome"){Start-Process "C:\Program Files\Google\Chrome\Application\chrome.exe"}
+    if($speechRecogEngRestr.Recognize().Text -eq "abre champ"){Start-Process "D:\xampp\xampp-control.exe";start-sleep 2; 
+                                                                [System.Windows.Forms.SendKeys]::SendWait("{TAB}");start-sleep 1; 
+                                                                [System.Windows.Forms.SendKeys]::SendWait("{TAB}");start-sleep 1; 
+                                                                [System.Windows.Forms.SendKeys]::SendWait("{ENTER}");start-sleep 1; 
+                                                                [System.Windows.Forms.SendKeys]::SendWait("{TAB}");start-sleep 1;
+                                                                [System.Windows.Forms.SendKeys]::SendWait("{TAB}");start-sleep 1; 
+                                                                [System.Windows.Forms.SendKeys]::SendWait("{ENTER}");start-sleep 1; 
+                                                                [System.Windows.Forms.SendKeys]::SendWait("{TAB}");start-sleep 1; 
+                                                                [System.Windows.Forms.SendKeys]::SendWait("{ENTER}");Start-Sleep 5; 
+                                                                [System.Windows.Forms.SendKeys]::SendWait("{TAB}");start-sleep 1; 
+                                                                [System.Windows.Forms.SendKeys]::SendWait("{ENTER}")}
+
+        
+}while(1)
