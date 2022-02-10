@@ -1,0 +1,53 @@
+# Find-Package PowerShell*
+
+# Crear un objeto en PowerShell y convertirlo en JSON
+
+#Clase Persona con propiedades
+class Persona
+{ 
+  $nombre
+  $apellido
+  $edad
+
+    #Constructor de Persona
+    Persona($nombre,$apellido,$edad)
+    {
+        $this.nombre = $nombre
+        $this.apellido = $apellido
+        $this.edad = $edad
+    }
+}
+
+# Crear el objeto Persona
+$persona = [Persona]::new('juan','lopez','33')
+
+$persona | ConvertTo-Json
+
+# Crear un objeto en PowerShell y convertirlo en JSON con la herramienta PowerShell Json Object (psjo)
+
+Find-Package PowerShellJsonObject | Install-Package
+psjo nombre=juan apellido=lopez edad=33
+
+# Convertir un fichero YAML en una colección Hashtable desde PowerShell
+Find-Package powershell-yaml | Install-Package
+
+$yaml = @"
+network:
+    version: 2
+    renderer: networkd
+    ethernets:
+        enp3s0:
+            dhcp4: true
+"@
+
+$obj = ConvertFrom-Yaml $yaml -AllDocuments
+$obj['network']['ethernets']['enp3s0']['dhcp4']
+
+# ConvertTo-Yaml
+* https://github.com/cloudbase/powershell-yaml
+
+# PowerShell Beautifier
+* https://github.com/DTW-DanWard/PowerShell-Beautifier
+
+# https://github.com/dlwyatt/PowerShellLoggingModule
+powershell -NoProfile -Command Invoke-Pester C:\Users\adminfp\Desktop\ejemplodepurar.ps1
